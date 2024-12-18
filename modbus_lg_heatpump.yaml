@@ -147,6 +147,7 @@ modbus:
         unique_id: "modbus.hp_temp_liquid_gas"
         scan_interval: 10
         address: 16
+        scale: 0.1
         unit_of_measurement: "°C"
         slave: !secret lg_heatpump_modbus_slave
         input_type: input
@@ -155,6 +156,7 @@ modbus:
         unique_id: "modbus.hp_temp_suction"
         scan_interval: 2
         address: 18
+        scale: 0.1
         unit_of_measurement: °C
         slave: !secret lg_heatpump_modbus_slave
         input_type: input
@@ -162,6 +164,7 @@ modbus:
       - name: "hp_temp_heatgas" # Heißgastemperatur
         unique_id: "hp_modbus.temp_heatgas"
         address: 19
+        scale: 0.1
         unit_of_measurement: °C
         slave: !secret lg_heatpump_modbus_slave
         input_type: input
@@ -191,6 +194,7 @@ modbus:
       - name: "hp_high_pressure" # Dampfdruck Kondensator
         unique_id: "hp_modbus.high_pressure"
         address: 22
+        scale: 0.1
         unit_of_measurement: Bar
         slave: !secret lg_heatpump_modbus_slave
         input_type: input
@@ -198,6 +202,7 @@ modbus:
       - name: "hp_low_pressure" # Dampfdruck Verdampfer
         unique_id: "modbus.hp_low_pressure"
         address: 23
+        scale: 0.1
         unit_of_measurement: Bar
         slave: !secret lg_heatpump_modbus_slave
         input_type: input
